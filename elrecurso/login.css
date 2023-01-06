@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+    background-image: url(./blue2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.titulo{
+    width: 700px;
+    margin-bottom: 70px;
+}
+
+.form {
+    width: 500px;
+    padding: 25px;
+    margin: 20px;
+
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.input {
+    width: 100%;
+    /* max-width: 220px; */
+    height: 45px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+}
+
+.input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+    transform: scale(0.95);
+}
+
+.input:focus {
+    border: 2px solid grey;
+}
+
+
+.txt-token {
+    font-weight: 600;
+}
+
+
+/* button/////////// */
+
+.btn-grad {
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 51%, #00c6ff 100%);
+    /* width: 100%; */
+    text-align: center;
+    margin: 25px 10px;
+    margin-bottom: 0;
+    padding: 8px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px rgb(99, 99, 99);
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    transform: scale(0.9);
+
+}
+
+.butt{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:750px) {
+    .titulo{
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .form{
+        width: 90%;
+    }
+
+    .titulo{
+        width: 290px;
+    }
+}

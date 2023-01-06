@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav section aside"
+        "footer footer footer";
+    grid-template-rows: 140px 1fr 50px;
+    grid-template-columns: 12% 1fr 15%;
+    grid-gap: 10px;
+    min-height: 100vh;
+}
+
+
+
+/* -------------------------header------------- */
+
+header {
+    background: #003D7C;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.grupotext {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.text1,
+.titulo,
+.text2 {
+    margin: 10px 0;
+}
+
+.fon2 {
+    width: 110px;
+}
+
+.logomain2 {
+    width: 50px;
+    display: none;
+}
+
+
+/* ----------------------nav izquierdo--------------- */
+nav {
+    background: #C9BFBF;
+    grid-area: nav;
+}
+
+
+/* ------------------------contenido----------------- */
+
+section {
+    background: #fcfcfc;
+    grid-area: section;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.form {
+    width: 62%;
+    /* min-height: 100vh; */
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+
+.instrucciones {
+    width: 50%;
+}
+
+.grupo-general {
+    margin: 20px 0;
+}
+
+.grupo-pregunta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.numg {
+    font-weight: 600;
+    font-size: 25px;
+    color: #003D7C;
+    margin-right: 8px;
+
+}
+
+.pregun {
+    font-weight: 600;
+}
+
+.form-control {
+    width: 70px;
+}
+
+
+
+
+.check-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    margin: 0 15px;
+}
+
+
+.text-cantidad {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* ----------------bottons-------- */
+.conjunto-botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 45px;
+
+
+}
+
+.cust_imp {
+    margin: 10px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------parte custom--------------- */
+.azulme {
+    font-weight: 600;
+    font-size: 18px;
+    color: #002A54;
+}
+
+.medicina {
+    border-top: #002a5463 solid 1px;
+    padding: 11px 0;
+}
+
+.numg2 {
+    font-weight: 500;
+    color: #003D7C;
+}
+
+.pregun2 {
+    font-weight: 500;
+}
+
+.grupo-general2 {
+    margin: 5px 0;
+}
+
+.form-control {
+    width: 70px;
+    height: 30px;
+}
+
+
+
+
+/* -------------------custom2---------------- */
+
+
+.txtregistro{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.grupo_instru{
+    text-align: center;
+}
+
+.instru{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    color: #003D7C;
+}
+
+
+.form-group {
+    margin: 25px 10px;
+}
+
+.form-control {
+    width: 100%;
+    height: 35px;
+}
+
+.peque{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+/* -------------button----------------- */
+.btn-grad {
+    background-image: linear-gradient(to right, #00c6ff 0%, #0072ff 51%, #00c6ff 100%);
+    margin: 10px;
+    padding: 8px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 10px rgb(85, 85, 85);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    transform: scale(0.9);  
+    box-shadow: 0 0 5px rgb(85, 85, 85);
+}
+
+
+
+
+/* --------------------------parte derecha---------------- */
+aside {
+    background: #C9C9C9;
+    grid-area: aside;
+}
+
+
+/* --------------footer--------------- */
+
+footer {
+    background: #002A54;
+    grid-area: footer;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorfot {
+    color: #8cc6ff;
+    margin-left: 5px;
+}
+
+header,
+nav,
+section,
+aside,
+footer {
+    padding: 5px;
+}
+
+@media screen and (max-width:1250px) {
+
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav section aside"
+            "footer footer footer";
+        grid-template-columns: 4% 1fr 6%;
+    }
+
+}
+
+
+@media screen and (max-width:900px) {
+
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav section aside"
+            "footer footer footer";
+        grid-template-columns: 8% 1fr 10%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instrucciones {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .text2 {
+        font-size: 12px;
+    }
+
+    .fon2 {
+        width: 150px;
+    }
+
+}
+
+
+@media screen and (max-width:550px) {
+
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav section aside"
+            "footer footer footer";
+        grid-template-columns: 2% 1fr 2%;
+    }
+
+    .fon2 {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logomain2 {
+        display: flex;
+    }
+
+    .swi {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .instrucciones {
+        font-weight: 300;
+    }
+
+    footer {
+        font-weight: 300;
+        font-size: 12px;
+    }
+}

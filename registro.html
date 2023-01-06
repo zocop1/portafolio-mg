@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="icon" type="image/x-icon" href="./elrecurso/logo.png">
+
+    <link rel="stylesheet" href="./elrecurso/registro.css">
+
+
+    <script src="https://kit.fontawesome.com/a3eb75cfaa.js" crossorigin="anonymous"></script>
+
+    <title>Registro Docente | C.E.C. FDV</title>
+</head>
+
+<body>
+
+    <!-- ----------------header---------------- -->
+    <header>
+        <div class="grupotext">
+            <!-- <img class="logomain2" src="./elrecurso/logo.png" alt="">
+            <h1 class="titulo">Moises Garrido Archila</h1>
+            <span class="text2">Bachillerato en construcción</span> -->
+
+            <div class="group">
+                <span class="txtregistro">Registro Docente</span>
+            </div>
+
+        </div>
+
+        <div class="bg2">
+            <img src="./elrecurso/logo.png" alt="" class="fon2">
+        </div>
+
+        <style type="text/css">
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        </style>
+    </header>
+
+    <!-- --------------nav lado izquierdo---------------- -->
+    <!-- <nav>
+
+    </nav> -->
+
+    <!-- ------------------parte central---------------- -->
+    <section>
+
+
+        <form action="" class="form">
+
+            <div class="grupo_instru">
+                <span class="instru">La información de este formularío será utilziada para crear los usuarios en sus
+                    distantas plataformas.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="intxt">Nombre <span class="peque">(Un Nombre)</span></label>
+                <input class="form-control" id="nombress" type="text" name="nombres" maxlength="15" required>
+            </div>
+
+            <div class="form-group">
+                <label for="intxt">Apellido <span class="peque">(Un Apellido)</span></label>
+                <input class="form-control" id="apellidoss" type="text" name="apellidos" maxlength="15" required>
+            </div>
+
+            <div class="form-group">
+                <label for="intxt">Correo</label>
+                <input class="form-control" id="correoss" type="email" name="correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="intxt">DPI <span class="peque">(Este será su usuario en Plataforma)</span></label>
+                <input class="form-control" id="us1" type="number" onKeyUp="habilitar()"
+                onkeydown="javascript: return event.keyCode === 8 | event.keyCode === 46 | event.keyCode === 09 ? true : !isNaN(Number(event.key))"
+                maxlength="13"
+                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="intxt">Confirme DPI</label>
+                <input class="form-control" id="us2" onKeyUp="habilitar()" type="number"  onkeydown="javascript: return event.keyCode === 8 | event.keyCode === 46 | event.keyCode === 09 ? true  : !isNaN(Number(event.key))"  maxlength="13" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="username2" required>
+            </div>
+
+            <div class="form-group">
+                <label for="intxt">Número de Teléfono <span class="peque">(Este será su contraseña)</span></label>
+                <input class="form-control" id="pass1" type="number" onKeyUp="habilitar()"
+                onkeydown="javascript: return event.keyCode === 8 | event.keyCode === 46 | event.keyCode === 09 ? true : !isNaN(Number(event.key))"
+                maxlength="8"
+                oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="intxt">Confirme número de Teléfono</label>
+                <input class="form-control" id="pass2" type="number" onKeyUp="habilitar()" onkeydown="javascript: return event.keyCode === 8 | event.keyCode === 46 | event.keyCode === 09 ? true: !isNaN(Number(event.key))" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="password2" required>
+            </div>
+
+
+            <div class="conjunto-botones">
+                <button type="button" class="btn btn-outline-success cust_imp">Continuar</button>
+            </div>
+
+        </form>
+
+
+        <script>
+            function habilitar() {
+                var dpi1 = document.getElementById('us1');
+                var dpi2 = document.getElementById('us2');
+                var pass1 = document.getElementById('pass1');
+                var pass2 = document.getElementById('pass2');
+                var boton = document.getElementById('continuar');
+                if (dpi1.value != dpi2.value) {
+                } else {
+                    boton.disabled = false;
+                    boton.style.display = 'block';
+                }
+                if (pass1.value != pass2.value) {
+                } else {
+                    boton.disabled = false;
+                    boton.style.display = 'block';
+                }
+            }
+    
+            function comprobaru() {
+                var dpi1 = document.getElementById('us1');
+                var dpi2 = document.getElementById('us2');
+                var boton = document.getElementById('continuar');
+                if (dpi1.value != dpi2.value) {
+                    boton.disabled = true;
+                    boton.style.display = 'none';
+                    alert('Los usuarios no coinciden');
+                } else {
+                    boton.disabled = false;
+                    boton.style.display = 'block';
+                }
+            }
+    
+            function comprobarn() {
+                var pass1 = document.getElementById('pass1');
+                var pass2 = document.getElementById('pass2');
+                var boton = document.getElementById('continuar');
+                if (pass1.value != pass2.value) {
+                    boton.disabled = true;
+                    boton.style.display = 'none';
+                    alert('Las contraseñas no coinciden');
+                } else {
+                    boton.disabled = false;
+                    boton.style.display = 'block';
+                }
+            }
+        </script>
+    </section>
+
+    <!-- ------------------parde derecha---------------- -->
+    <!-- <aside>
+
+    </aside> -->
+
+    <!-- --------------------footer----------------- -->
+    <footer>
+        Copyright © 2022 C.E.C. Fuente de Vida | Desarrollado por <span class="colorfot"> Tecnología Académica</span>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>
